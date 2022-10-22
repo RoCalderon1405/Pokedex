@@ -1,0 +1,173 @@
+body {
+  background-color: rgb(240, 240, 240);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+} 
+
+.contenedor {
+  margin: auto;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.pokemon {
+  height: 180px;
+  width: 350px;
+}
+
+/* BARRA NAV */
+
+.wrapper {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+
+.search {
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 25px;
+  width: 100%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: #f5f5f5;
+}
+
+.search-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+}
+
+.clear1-icon1 {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  width: 12px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.search:hover,
+.search:focus {
+  border: 1px solid #009688;
+  background-color: white;
+}
+
+#cartas-block {
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+      )
+      ,url("image/css/fondo-w.jpg");
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+#detonar {
+  height: 40px;
+  width: 100px;
+}
+
+/* BODY BLOCK CARTAS */
+.imgPokemon {
+  height: 115px;
+  width: 115px;
+  background-color: #6431f0;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.nombre-Pokemon {
+  font-size: 10px;
+}
+
+/* MODAL */
+/* BOTON POKEMON */
+.carta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.imgPokemonModal {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 195px;
+  width: 207px;
+  background-color: #31f074;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.modalContendedor {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: chartreuse;
+}
+
+.statsPokemon {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* BOTON MODAL TIPO */
+
+.btn-modal-type {
+  height: 2rem;
+  width: 6rem;
+}
+
+
+@media(min-width:500px) {
+  #cartas-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width:600px) {
+  #cartas-block {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media(min-width:920px) {
+  #cartas-block {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media(min-width:1100px) {
+  #cartas-block {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media(min-width:1380px) {
+  #cartas-block {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media(min-width:1580px) {
+  #cartas-block {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
