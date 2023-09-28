@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon consumo.js",
-    "start": "node consumo.js"
+    "test": "app.js",
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",

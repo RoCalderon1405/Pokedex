@@ -1,173 +1,112 @@
-body {
-  background-color: rgb(240, 240, 240);
+* {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-} 
-
-.contenedor {
-  margin: auto;
-  margin-left: 80px;
-  margin-right: 80px;
+  box-sizing: border-box;
 }
 
-.logo {
+html {
+  scroll-behavior: smooth;
+
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: #000;
+}
+
+.pokedex__header {
+  background: rgb(42, 50, 75);
+  padding: 10px;
+  margin: auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 14;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  margin: auto;
+}
+
+.pokedex__header-title {
+  color: rgb(201, 195, 195);
+  margin: 5px 10px;
+}
+
+.pokedex__header form input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin: 10px 5px;
+}
+
+.pokedex__header form button {
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.pokedex__pokemon-content {
+  padding: 20px 5px;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  gap: 4rem;
+  margin-top: 8rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pokemon {
-  height: 180px;
-  width: 350px;
-}
-
-/* BARRA NAV */
-
-.wrapper {
-  position: relative;
-  display: flex;
-  min-width: 100px;
-}
-
-.search {
-  border: 1px solid grey;
+  background: rgb(241, 241, 245);
+  width: 300px;
+  height: 380px;
   border-radius: 5px;
-  height: 25px;
+  margin: auto;
+  box-shadow: 0px 0px 10px 10px rgb(68, 97, 226);
+  border: 5px solid #0ecce6;
+}
+
+.img-container {
+  display: flex;
+  margin: 1rem auto;
+  width: 200px;
+}
+
+.img-container img {
+  background: rgb(207, 205, 205);
+  border-radius: 100%;
   width: 100%;
-  padding: 2px 23px 2px 30px;
-  outline: 0;
-  background-color: #f5f5f5;
 }
 
-.search-icon {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 14px;
-}
-
-.clear1-icon1 {
-  position: absolute;
-  top: 9px;
-  right: 8px;
-  width: 12px;
-  cursor: pointer;
-  visibility: hidden;
-}
-
-.search:hover,
-.search:focus {
-  border: 1px solid #009688;
-  background-color: white;
-}
-
-#cartas-block {
-  background-image: linear-gradient(0deg,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-      )
-      ,url("image/css/fondo-w.jpg");
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-}
-
-#detonar {
-  height: 40px;
-  width: 100px;
-}
-
-/* BODY BLOCK CARTAS */
-.imgPokemon {
-  height: 115px;
-  width: 115px;
-  background-color: #6431f0;
-  border-radius: 100px;
-  padding: 10px;
-}
-
-.nombre-Pokemon {
-  font-size: 10px;
-}
-
-/* MODAL */
-/* BOTON POKEMON */
-.carta {
+.info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 20px;
-}
-
-.imgPokemonModal {
+  gap: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  height: 195px;
-  width: 207px;
-  background-color: #31f074;
-  border-radius: 100px;
-  padding: 10px;
 }
 
-.modalContendedor {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  background-color: chartreuse;
-}
-
-.statsPokemon {
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: flex-start;
-}
-
-/* BOTON MODAL TIPO */
-
-.btn-modal-type {
-  height: 2rem;
-  width: 6rem;
-}
-
-
-@media(min-width:500px) {
-  #cartas-block {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media(min-width:600px) {
-  #cartas-block {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
-@media(min-width:920px) {
-  #cartas-block {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-@media(min-width:1100px) {
-  #cartas-block {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-@media(min-width:1380px) {
-  #cartas-block {
-    grid-template-columns: repeat(8, 1fr);
-  }
-}
-
-@media(min-width:1580px) {
-  #cartas-block {
-    grid-template-columns: repeat(9, 1fr);
-  }
+.number {
+  background: rgb(199, 199, 199);
+  padding: 0.5rem;
+  border-radius: 100%;
+  padding: auto 2px;
 }
