@@ -73,6 +73,8 @@ form {
   margin-right: auto;
 }
 
+
+/* CARTAS POKEMON */
 .pokemon {
   background: rgb(241, 241, 245);
   width: 300px;
@@ -81,21 +83,28 @@ form {
   margin: auto;
   box-shadow: 0px 0px 10px 10px rgb(68, 97, 226);
   border: 5px solid #0ecce6;
+  cursor: pointer;
 }
 
-.img-container {
+.pokemon:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+
+.pokemon .img-container {
   display: flex;
   margin: 1rem auto;
   width: 200px;
 }
 
-.img-container img {
+.pokemon .img-container img {
   background: rgb(207, 205, 205);
   border-radius: 100%;
   width: 100%;
 }
 
-.info {
+.pokemon .info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,9 +113,23 @@ form {
   margin-bottom: 1rem;
 }
 
-.number {
+.pokemon .number {
   background: rgb(199, 199, 199);
   padding: 0.5rem;
   border-radius: 100%;
   padding: auto 2px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.753);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

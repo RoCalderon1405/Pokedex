@@ -18,6 +18,11 @@ const getPokemon = async (id, modal) => {
 function createPokemon(pokemon, modal) {
   const pokemonEl = document.createElement("div");
   pokemonEl.classList.add("pokemon");
+  pokemonEl.setAttribute("id", "pokemonCard");
+  pokemonEl.setAttribute("onClick", `openModal(${pokemon.id})`);
+  pokemonEl.addEventListener("click", () => {
+    openModal();
+  });
 
   const poke_types = pokemon.types.map((type) => type.type);
   const type1 =
@@ -30,7 +35,7 @@ function createPokemon(pokemon, modal) {
   if (modal !== true) {
     const pokeInnerHTML = `
   <div class="img-container">
-    <img src=${imgPoke} alt=${name}/>
+    <img src=${imgPoke} alt=${name} id="nombrePokemon"/>
   </div>
   <div class="info">
     <span class="number">#${pokemon.id.toString()}</span>
@@ -41,7 +46,6 @@ function createPokemon(pokemon, modal) {
 
     pokemonEl.innerHTML = pokeInnerHTML;
     pokeContent.appendChild(pokemonEl);
-    
   } else {
     const pokeInnerHTML = `
     <div class="modal" id="modalPokemon">
@@ -70,3 +74,17 @@ pokeForm.addEventListener("submit", (e) => {
   // pokeContent.innerHTML = ''; // Limpiar el contenido actual
   getPokemon(searchPokemon, true);
 });
+
+// function openModal(id) {
+//   const modalSearch = document.getElementById("modalPokemon");
+//   getPokemon(id, true);
+//   drawPokemon = () => {}; // Deshabilitar la función de dibujo
+// }
+
+
+function exitModal() {
+  const modalPokemon = document.getElementById("modalPokemon");
+  modalPokemon.style.display = "none";
+  modalPokemon.innerHTML = "";
+  drawPokemon();
+}
